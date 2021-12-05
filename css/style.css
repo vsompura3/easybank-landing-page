@@ -61,6 +61,11 @@ body {
 a:not([class]) {
   text-decoration-skip-ink: auto; }
 
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit; }
+
 /* Make images easier to work with */
 img,
 picture {
@@ -91,6 +96,18 @@ html {
   font-size: 100%; }
 
 body {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-300);
   font-family: var(--ff-base);
-  font-size: var(--fs-500, 1.125rem);
-  font-weight: var(--fw-400, 400); }
+  color: var(--clr-neutral-400); }
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--clr-primary-300); }
+
+h1 {
+  font-size: var(--fs-900); }

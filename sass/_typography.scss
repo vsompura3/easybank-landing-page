@@ -1,0 +1,23 @@
+html {
+	font-size: 100%;
+}
+
+body {
+	font-size: var(--fs-500);
+	font-weight: var(--fw-300);
+	font-family: var(--ff-base);
+	color: var(--clr-neutral-400);
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: 400;
+	line-height: 1.1;
+	color: var(--clr-primary-300);
+}
+
+h1 {
+	font-size: var(--fs-900);
+}

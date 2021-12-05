@@ -45,6 +45,12 @@ a:not([class]) {
 	text-decoration-skip-ink: auto;
 }
 
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+}
+
 /* Make images easier to work with */
 img,
 picture {
@@ -75,15 +81,4 @@ optgroup {
 		transition-duration: 0.01ms !important;
 		scroll-behavior: auto !important;
 	}
-}
-
-// BASE STYLES
-html {
-	font-size: 100%;
-}
-
-body {
-	font-family: var(--ff-base);
-	font-size: var(--fs-500, 1.125rem);
-	font-weight: var(--fw-400, 400);
 }
