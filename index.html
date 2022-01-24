@@ -1,34 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- linking Stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+    <title>Frontend Mentor | Easybank landing page</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <a href="#" aria-label="Homepage">
+          <img src="./images/logo.svg" alt="" />
+        </a>
+        <button class="btn navbar-menu-toggle" aria-controls="primary-controls">
+          <span class="sr-only" aria-expanded="false">Menu</span>
+        </button>
+        <ul
+          class="primary-navigation"
+          id="primary-navigation"
+          data-visible="false"
+        >
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Career</a></li>
+        </ul>
+        <button class="btn btn--invite">Request Invite</button>
+      </nav>
+      <div class="backdrop" aria-hidden="true"></div>
+    </header>
 
-		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <section class="container">
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus,
+        possimus. Dignissimos omnis minus modi voluptatum quas provident
+        consectetur quibusdam hic veniam nostrum nemo, impedit dolorum sint sed
+        molestias laboriosam asperiores.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+        reiciendis. Rerum blanditiis natus ad impedit suscipit totam, corrupti
+        perferendis ipsam molestias praesentium libero asperiores error eius ab
+        eum tempore amet. Illum, fuga repellat nulla asperiores esse dolorum
+        minima molestiae expedita.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+        nesciunt distinctio officia odio est? A pariatur ut, consequatur
+        quibusdam ab eum minus distinctio delectus ducimus corporis. A adipisci
+        sunt illo?
+      </p>
+    </section>
 
-		<!-- linking Stylesheet -->
-		<link rel="stylesheet" href="css/style.css" />
-
-		<title>Frontend Mentor | Easybank landing page</title>
-
-		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-		<style>
-			@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
-
-			.attribution {
-				font-size: 11px;
-				text-align: center;
-			}
-			.attribution a {
-				color: hsl(228, 45%, 44%);
-			}
-		</style>
-	</head>
-	<body>
-		<!-- Navbar -->
-
-		<!--
+    <!--
   Home
   About
   Contact
@@ -105,11 +139,12 @@
   Request Invite
 
   © Easybank. All Rights Reserved
+  <div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      >Frontend Mentor</a
+    >. Coded by <a href="#">Your Name Here</a>.
+  </div>
 -->
-		<div class="attribution">
-			Challenge by
-			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-			Coded by <a href="#">Your Name Here</a>.
-		</div>
-	</body>
+  </body>
 </html>
