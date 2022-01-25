@@ -16,50 +16,55 @@
     <title>Frontend Mentor | Easybank landing page</title>
   </head>
   <body>
+    <!-- Header -->
     <header class="header">
-      <nav class="navbar">
+      <div class="container header-inner">
         <a href="#" aria-label="Homepage">
-          <img src="./images/logo.svg" alt="" />
+          <img src="./images/logo.svg" alt="Easybank" />
         </a>
-        <button class="btn navbar-menu-toggle" aria-controls="primary-controls">
+        <button
+          class="btn navbar-menu-toggle"
+          aria-controls="primary-navigation"
+        >
           <span class="sr-only" aria-expanded="false">Menu</span>
         </button>
-        <ul
-          class="primary-navigation"
-          id="primary-navigation"
-          data-visible="false"
-        >
+        <ul class="header-navigation">
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
           <li><a href="#">Blog</a></li>
-          <li><a href="#">Career</a></li>
+          <li><a href="#">Careers</a></li>
         </ul>
-        <button class="btn btn--invite">Request Invite</button>
-      </nav>
-      <div class="backdrop" aria-hidden="true"></div>
+        <button class="btn btn-invite btn-desktop">Request Invite</button>
+      </div>
     </header>
 
-    <section class="container">
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus,
-        possimus. Dignissimos omnis minus modi voluptatum quas provident
-        consectetur quibusdam hic veniam nostrum nemo, impedit dolorum sint sed
-        molestias laboriosam asperiores.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-        reiciendis. Rerum blanditiis natus ad impedit suscipit totam, corrupti
-        perferendis ipsam molestias praesentium libero asperiores error eius ab
-        eum tempore amet. Illum, fuga repellat nulla asperiores esse dolorum
-        minima molestiae expedita.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-        nesciunt distinctio officia odio est? A pariatur ut, consequatur
-        quibusdam ab eum minus distinctio delectus ducimus corporis. A adipisci
-        sunt illo?
-      </p>
+    <!-- Navbar -->
+    <nav class="navbar" data-visible="false">
+      <ul id="primary-navigation" class="primary-navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+      <div class="backdrop" aria-hidden="true"></div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section section--hero">
+      <div class="hero-image">
+        <img src="./images/image-mockups.png" alt="" />
+      </div>
+      <div class="hero-info flow">
+        <h1>Next generation digital banking</h1>
+        <p>
+          Take your financial life online. Your Easybank account will be a
+          one-stop-shop for spending, saving, budgeting, investing, and much
+          more.
+        </p>
+        <button class="btn btn-invite">Rquest Invite</button>
+      </div>
     </section>
 
     <!--

@@ -1,16 +1,21 @@
-const navToggle = document.querySelector('.navbar-menu-toggle');
 const nav = document.querySelector('.navbar');
-const menu = document.getElementById('primary-navigation');
+const navToggle = document.querySelector('.navbar-menu-toggle');
+const backdrop = document.querySelector('.backdrop');
 
 navToggle.addEventListener('click', function () {
-  const visibility = menu.getAttribute('data-visible');
-  if (visibility === 'false') {
-    nav.classList.add('show');
-    menu.setAttribute('data-visible', true);
+  const isOpen = nav.getAttribute('data-visible');
+  if (isOpen === 'false') {
+    nav.setAttribute('data-visible', true);
     navToggle.setAttribute('aria-expanded', true);
   } else {
-    nav.classList.remove('show');
-    menu.setAttribute('data-visible', false);
+    nav.setAttribute('data-visible', false);
+    navToggle.setAttribute('aria-expanded', false);
+  }
+});
+
+window.addEventListener('keydown', function (e) {
+  if (!nav.getAttribute('data-visibility') && e.key === 'Escape') {
+    nav.setAttribute('data-visible', false);
     navToggle.setAttribute('aria-expanded', false);
   }
 });
