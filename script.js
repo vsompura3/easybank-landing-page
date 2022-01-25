@@ -19,3 +19,10 @@ window.addEventListener('keydown', function (e) {
     navToggle.setAttribute('aria-expanded', false);
   }
 });
+
+backdrop.addEventListener('click', function () {
+  if (!nav.getAttribute('data-visibility')) {
+    nav.setAttribute('data-visible', false);
+    navToggle.setAttribute('aria-expanded', false);
+  }
+});
