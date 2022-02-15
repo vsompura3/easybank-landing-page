@@ -1,4 +1,4 @@
-const nav = document.querySelector('.navbar');
+const nav = document.getElementById('primary-navigation');
 const navToggle = document.querySelector('.navbar-menu-toggle');
 const backdrop = document.querySelector('.backdrop');
 
