@@ -322,6 +322,48 @@ select {
   }
 }
 
+/* Hero */
+.hero {
+  display: grid;
+}
+
+.hero-image {
+  background-image: url('./images/bg-intro-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: calc(40vh - 1em);
+  max-height: 65vh;
+}
+
+.hero-image img {
+  transform: translateY(-25%);
+}
+
+.hero-desc > *:not(:first-child) {
+  margin-top: 1em;
+}
+
+.hero-desc {
+  text-align: center;
+  padding-inline: 2em;
+  padding-block: 0 4em;
+}
+
+.hero-desc h1 {
+  font-weight: 400;
+  font-size: 3rem;
+  color: hsl(var(--clr-dark));
+}
+
+.hero-desc p {
+  font-size: 1.125rem;
+  color: hsl(var(--clr-slate));
+}
+
+.hero-desc .btn {
+  margin-inline: auto;
+}
+
 /* Main */
 section {
   padding-block: 3em;
@@ -381,12 +423,11 @@ section h2 + p {
 }
 
 .articles-grid article {
-  max-width: 400px;
+  max-width: 350px;
   margin-inline: auto;
   background-color: hsl(var(--clr-white));
   border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0.25rem 0.25rem 1rem hsl(var(--clr-dark) / 0.1);
   display: flex;
   flex-direction: column;
 }
@@ -402,12 +443,12 @@ article img {
 }
 
 .article-details > *:not(:first-child) {
-  margin-top: 0.75em;
+  margin-top: 0.5em;
 }
 
 .article-details cite {
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: hsl(var(--clr-slate));
 }
 
@@ -490,7 +531,7 @@ footer {
 
 .footer-desc .btn:focus-visible {
   outline: 2px solid hsl(var(--clr-accent-1));
-  outline-offset: 2px;
+  outline-offset: 3px;
 }
 
 .footer-desc p {
@@ -561,5 +602,62 @@ footer {
   .footer-desc {
     justify-content: center;
     align-items: end;
+  }
+}
+
+@media (min-width: 45em) {
+  .hero {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .hero-image {
+    order: 1;
+    background-image: url('./images/bg-intro-desktop.svg');
+    display: flex;
+    align-items: end;
+  }
+
+  .hero-image img {
+    position: relative;
+    transform: translateY(0);
+  }
+
+  .hero-desc {
+    text-align: left;
+    padding-inline: 1em;
+  }
+
+  .hero-desc h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-desc p {
+    font-size: 1.25rem;
+  }
+
+  .hero-desc .btn {
+    margin-inline: 0 auto;
+  }
+}
+
+@media (min-width: 50em) {
+  .hero {
+    grid-template-columns: minmax(1em, 1fr) repeat(2, 37.5em) minmax(1em, 1fr);
+  }
+
+  .hero-desc {
+    grid-column: 2 / 3;
+  }
+
+  .hero-image {
+    grid-column: 3 / -1;
+    background-size: 200%;
+    background-position: left;
+  }
+
+  .hero-image img {
+    transform: translateY(10rem);
+    right: -8rem;
   }
 }
