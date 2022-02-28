@@ -201,17 +201,17 @@ select {
   right: 0;
   bottom: 0;
   height: 4px;
+  background-image: -o-linear-gradient(
+    left,
+    hsl(var(--clr-accent-1)),
+    hsl(var(--clr-accent-2))
+  );
   background-image: -webkit-gradient(
     linear,
     left top,
     right top,
     from(hsl(var(--clr-accent-1))),
     to(hsl(var(--clr-accent-2)))
-  );
-  background-image: -o-linear-gradient(
-    left,
-    hsl(var(--clr-accent-1)),
-    hsl(var(--clr-accent-2))
   );
   background-image: linear-gradient(
     to right,
@@ -235,17 +235,17 @@ select {
 .btn-invite {
   font-size: 1.125rem;
   font-weight: 700;
+  background-image: -o-linear-gradient(
+    left,
+    hsl(var(--clr-accent-1)),
+    hsl(var(--clr-accent-2))
+  );
   background-image: -webkit-gradient(
     linear,
     left top,
     right top,
     from(hsl(var(--clr-accent-1))),
     to(hsl(var(--clr-accent-2)))
-  );
-  background-image: -o-linear-gradient(
-    left,
-    hsl(var(--clr-accent-1)),
-    hsl(var(--clr-accent-2))
   );
   background-image: linear-gradient(
     to right,
@@ -359,6 +359,8 @@ select {
     transition: transform 250ms ease, opacity 250ms ease;
     transition: transform 250ms ease, opacity 250ms ease,
       -webkit-transform 250ms ease;
+    transition: transform 250ms ease, opacity 250ms ease,
+      -webkit-transform 250ms ease;
   }
 
   #primary-navigation[data-visible='true'] ul {
@@ -385,17 +387,17 @@ select {
   #primary-navigation .backdrop {
     position: fixed;
     inset: 0;
+    background-image: -o-linear-gradient(
+      top,
+      hsl(var(--clr-dark)),
+      transparent
+    );
     background-image: -webkit-gradient(
       linear,
       left top,
       left bottom,
       from(hsl(var(--clr-dark))),
       to(transparent)
-    );
-    background-image: -o-linear-gradient(
-      top,
-      hsl(var(--clr-dark)),
-      transparent
     );
     background-image: linear-gradient(
       to bottom,
@@ -447,7 +449,7 @@ select {
 
 .hero-desc h1 {
   font-weight: 400;
-  font-size: 3rem;
+  font-size: clamp(2.25rem, 3vw + 1rem, 2.5rem);
   color: hsl(var(--clr-dark));
 }
 
